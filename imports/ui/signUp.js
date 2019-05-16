@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Accounts } from 'meteor/accounts-base';
+import Button from '@material-ui/core/Button';
 export default class SignUp extends React.Component {
     constructor(props) {
         super(props)
@@ -38,9 +39,7 @@ export default class SignUp extends React.Component {
                 <form >
                     <input type='email' ref='email' name='email' placeholder='Email' />
                     <input type='password' ref='password' name='password' placeholder='Password' />
-                    <button onClick={this.onSubmit.bind(this)}>create User</button>
-                    <button onClick={this.increment.bind(this)}>+1</button>
-                    <button onClick={this.decrement.bind(this)}>-1</button>
+                    <Button variant="contained" color="primary" onClick={this.onSubmit.bind(this)}>create User</Button>
                 </form>
                 <p>{this.state.count}</p>
                 <Link to='/login'> Already have an account?</Link>

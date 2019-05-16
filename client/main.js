@@ -9,7 +9,6 @@ import Dashboard from '../imports/ui/dashboard';
 import About from '../imports/ui/about';
 import Home from '../imports/ui/home';
 import Login from '../imports/ui/login';
-console.log(bb, '--crea', createBrowserHistory())
 const browserHistory = createBrowserHistory();
 const unauthPages = ['/', '/Login', '/signup']
 const authPages = ['/links']
@@ -30,6 +29,9 @@ const routes = (
     </Switch>
   </Router>
 );
+
+var ctx = 'myChart';
+
 Tracker.autorun(() => {
   const isAuthenticated = !!Meteor.userId();
   const pathName = window.location.href
