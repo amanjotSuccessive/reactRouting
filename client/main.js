@@ -16,6 +16,7 @@ const authPages = ['/links']
 import Users from '../imports/api/users';
 import { Links } from '../imports/api/links';
 import LinksList from '../imports/ui/linksList'
+import topic from '../imports/ui/topics';
 const onEnterPublicPage = () => {
   if (Meteor.userId()) {
 
@@ -30,6 +31,7 @@ const routes = (
       <Route path='/link/' component={Link} />
       <Route path="/signup/" component={SignUp} onEnter={onEnterPublicPage} />
       <Route path='/home' component={Home} />
+      <Route path='/topics' component={topic} />
       <Route component={NotFound} />
     </Switch>
   </Router>

@@ -1,7 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 
 export default function Topics({ match }) {
+    console.log('------/',match)
     return (
         <div>
             <h2>Topics</h2>
